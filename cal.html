@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h1>❤️ Love Caclulator ❤️</h1>
+    <input type="text" id="name1" placeholder="Your name">
+    <input type="text" id="name2" placeholder="Partner's name">
+    <button onclick="calculateLove()">Calculate Love</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateLove(){
+            var name1 = document.getElementById('name1').value;
+            var name2 = document.getElementById('name2').value;
+
+            if (name1=="" || name2==""){
+                alert("Please enter both names")
+                return;
+            }
+
+            var loveScore = Math.floor(Math.random()*100)+1;
+            var message = "";
+            if(loveScore>=0 && loveScore<=40){
+                // alert("No chances");
+                message = "No chances";
+            }
+            else if(loveScore>=41 && loveScore<=60){
+                // alert("still no chances");
+                 message = "Still No chances";
+                
+
+            }
+            else if(loveScore>=61 && loveScore<=80){
+                // alert("successfull love story");
+                 message = "Successfull love story";
+
+            }
+            else {
+                // alert("made for each other")
+                 message = "Made for each other";
+            }
+
+
+            document.getElementById("result").innerHTML = name1 + " ❤️" + name2 + "❤️" + loveScore + "%love"  + message;
+        }
+    </script>
+</body>
+</html>

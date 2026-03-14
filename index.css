@@ -1,0 +1,110 @@
+
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#box1 {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(125, 60, 60);
+    border: 3px solid rebeccapurple;
+    border-radius: 100%;
+    margin: 40px;
+}
+
+#box1:hover {
+    background-color: rgb(234, 104, 126);
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+
+#box2 {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(64, 7, 7);
+    border: 3px solid rebeccapurple;
+    border-radius: 16px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin: 40px;
+}
+
+#box2:hover {
+    background-color: rgb(255, 11, 52);
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+    
+#box3{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(0, 30, 77);
+        border: 3px solid rgb(71, 0, 142);
+        border-radius: 100%;
+
+        margin: 40px;
+    }
+
+ #box3:hover {
+        background-color: rgb(46, 175, 249);
+        transform: scale(1.5);
+        transition: all 0.5s;
+    }
+
+    *{
+        /* background: #000;
+         */
+        margin: 0;
+        padding: 0;
+
+    }
+
+
+.sky{
+    /* background: rgb(116, 191, 226); */
+    height: 650px;
+    width: 100%;
+    background: url(/61j2Hm0j9iL.jpg);
+    
+
+
+}
+.sun{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 100%;
+}
+.clouds{
+    width: 100%;
+    height: 500px;
+}
+
+.road{
+    /* margin-top: 500px; */
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    position: absolute;
+
+}
+
+.car{
+    margin-bottom: 50px;
+    position: absolute;
+    bottom: 10px;
+    animation: move 2s linear infinite;
+
+}
+
+@keyframes move{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 100%;
+    }
+}

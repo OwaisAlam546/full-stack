@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Validator</title>
+    <style>
+
+        *{
+            /* background: #b02c2c;/ */
+        }
+        .container{
+            display: flex;
+            border-radius: 15px;
+            margin: 10% auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 600px;
+            
+            /* background-color: black; */
+            border: 2px solid black;
+            height: 500px;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            margin: 40px;
+            padding: 30px;
+        }
+        input{
+            /* padding: 30px; */
+            margin: 20px;
+            font-size: larger;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Welcome to vote validator</h1>
+        <div class="form">
+
+            <input type="text" name="" id="name" placeholder="Enter your name">
+            <input type="number" name="" id="age" placeholder="Enter your age">
+            <button onclick="vote()">Submit</button>
+            <p id="res">The result will be displayed here</p>
+        </div>
+        </div>
+        <script src="vote.js"></script>
+
+    
+</body>
+</html>
