@@ -1,31 +1,181 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Calculator</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#5b0614,#ff7eb3);
+}
+
+/* Card */
+
+.card{
+width:350px;
+background:white;
+padding:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+animation:cardAppear 1s ease;
+}
+
+/* Title */
+
+.card h1{
+color:#ff3e6c;
+margin-bottom:25px;
+}
+
+/* Inputs */
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+transition:0.3s;
+}
+
+input:focus{
+border-color:#ff3e6c;
+outline:none;
+box-shadow:0 0 6px rgba(255,62,108,0.5);
+}
+
+/* Button */
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#ff3e6c;
+border:none;
+color:white;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#e22f5c;
+transform:scale(1.05);
+}
+
+/* Result */
+
+#result{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+color:#444;
+opacity:0;
+transform:translateY(10px);
+transition:0.5s;
+}
+
+/* show animation */
+
+.show{
+opacity:1 !important;
+transform:translateY(0px) !important;
+}
+
+/* Card animation */
+
+@keyframes cardAppear{
+0%{
+transform:scale(0.5);
+opacity:0;
+}
+100%{
+transform:scale(1);
+opacity:1;
+}
+}
+
+</style>
 </head>
+
 <body>
-  
 
-    <!-- <div id="container">
-        <div id="box1"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
+<div class="card">
 
-    </div> -->
-    <div class="sky">
-        <span class="sun"></span>
-        <!-- <img src="/61j2Hm0j9iL.jpg" alt="" class="clouds"> -->
-        <!-- <img src="/images (1).jpg" alt="" class="sun"> -->
-    </div>
+<h1>❤️ Love Calculator ❤️</h1>
+
+<input type="text" id="name1" placeholder="Your name">
+<input type="text" id="name2" placeholder="Partner's name">
+
+<button onclick="calculateLove()">Calculate Love</button>
+
+<div id="result"></div>
+
+</div>
 
 
-    <div class="road">
-        <img src="/images-removebg-preview.png" alt="bmw m5" class="car">
-    </div>
+<script>
+
+function calculateLove(){
+
+var name1=document.getElementById("name1").value;
+var name2=document.getElementById("name2").value;
+
+if(name1=="" || name2==""){
+alert("Please enter both names");
+return;
+}
+
+var loveScore=Math.floor(Math.random()*100)+1;
+
+var message="";
+
+if(loveScore<=40){
+message="No chances 💔";
+}
+else if(loveScore<=60){
+message="Still hope 😅";
+}
+else if(loveScore<=80){
+message="Successful love story ❤️";
+}
+else{
+message="Made for each other 💍";
+}
+
+var result=document.getElementById("result");
+
+result.innerHTML=
+name1 + " ❤️ " + name2 +
+"<br><br>" +
+"Love Score : " + loveScore + "%" +
+"<br>" +
+message;
+
+result.classList.add("show");
+
+}
+
+</script>
+
 </body>
 </html>
-
-
